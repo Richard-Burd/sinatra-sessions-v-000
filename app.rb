@@ -2,6 +2,7 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   register Sinatra::ActiveRecordExtension
+  use Rack::Flash
   configure do
     enable :sessions unless test?
     set :session_secret, "secret"
