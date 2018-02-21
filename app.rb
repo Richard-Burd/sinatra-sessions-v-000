@@ -98,9 +98,8 @@ class App < Sinatra::Base
   end
 
   get '/burdlogout' do
+    session.clear
     "Successfully logged out"
-    session = {}
-    #session.clear
   end
 
   get '/posts/new' do
