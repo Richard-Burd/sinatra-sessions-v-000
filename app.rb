@@ -1,11 +1,11 @@
 require_relative 'config/environment'
 require 'rack-flash'
 class App < Sinatra::Base
+  use Rack::Flash
   configure do
     enable :sessions unless test?
     set :session_secret, "secret"
     set :views, 'views'
-    use Rack::Flash
   end
 
   # This thing makes it impossible to render actual HTML in this thing :(
@@ -14,7 +14,7 @@ class App < Sinatra::Base
   #end
 
   get '/' do
-    "Welcome to Sinatra Sessions! In this lab, we will be learning about the general principles behind a sessions cookie. In order to proceed, let's go to the '/first_exercise' path."
+    erb :index
   end
 
   get '/first_exercise' do
