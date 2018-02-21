@@ -98,7 +98,7 @@ class App < Sinatra::Base
   end
 
   get '/burdlogout' do
-    "Successfully logged out as #{session[:email]}."
+    "Successfully logged out"
     session.clear
   end
 
