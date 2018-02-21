@@ -98,7 +98,7 @@ class App < Sinatra::Base
   end
 
   get '/burdlogout' do
-    flash[:message] = "Successfully logged out as #{session[:email]}."
+    "Successfully logged out as #{session[:email]}."
     session.clear
   end
 
