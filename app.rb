@@ -1,7 +1,6 @@
 require_relative 'config/environment'
 require 'rack-flash'
 class App < Sinatra::Base
-  register Sinatra::ActiveRecordExtension
   use Rack::Flash
   configure do
     enable :sessions unless test?
