@@ -90,6 +90,7 @@ class App < Sinatra::Base
   # binding.pry
     if session[:email] != nil
   # if !(session[:email].empty?)
+      flash[:message] = "Successfully created a new account."
       "You are logged in as #{session[:email]}"
     else
       "You aren't logged in at all!!"
