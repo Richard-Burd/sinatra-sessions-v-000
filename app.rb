@@ -5,6 +5,7 @@ class App < Sinatra::Base
     enable :sessions unless test?
     set :session_secret, "secret"
     set :views, 'views'
+    use Rack::Flash
   end
 
   # This thing makes it impossible to render actual HTML in this thing :(
