@@ -9,6 +9,7 @@ gem 'thin'
 gem 'shotgun'
 gem 'pry'
 gem 'require_all'
+gem 'rack-flash3'
 
 group :test do
   gem 'rspec'
