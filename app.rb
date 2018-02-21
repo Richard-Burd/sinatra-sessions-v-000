@@ -92,7 +92,8 @@ class App < Sinatra::Base
   # if !(session[:email].empty?)
       "You are logged in as #{session[:email]}"
     else
-      "You aren't logged in at all!!"
+      flash[:message] = "You aren't logged in at all!!"
+    redirect '/burdlogin'
     end
   end
 
