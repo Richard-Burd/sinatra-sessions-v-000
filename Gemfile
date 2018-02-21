@@ -4,8 +4,6 @@ source "https://rubygems.org"
 # gem "rails"
 gem 'eventmachine', '~>1.0.5'
 gem 'sinatra'
-gem 'activerecord', :require => 'active_record'
-gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'rake'
 gem 'thin'
 gem 'shotgun'
