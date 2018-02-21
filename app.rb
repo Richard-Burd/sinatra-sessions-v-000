@@ -1,11 +1,11 @@
 require_relative 'config/environment'
 require 'rack-flash'
 class App < Sinatra::Base
-  use Rack::Flash
   configure do
     enable :sessions unless test?
     set :session_secret, "secret"
     set :views, 'views'
+    use Rack::Flash
   end
 
   # This thing makes it impossible to render actual HTML in this thing :(
@@ -92,7 +92,7 @@ class App < Sinatra::Base
   # if !(session[:email].empty?)
       "You are logged in as #{session[:email]}"
     else
-      flash[:message] = "You aren't logged in at all!!"
+      "You aren't logged in at all!!"
     end
   end
 
