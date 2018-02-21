@@ -99,6 +99,7 @@ class App < Sinatra::Base
 
   get '/burdlogout' do
     "Successfully logged out"
+    session = {}
     #session.clear
   end
 
